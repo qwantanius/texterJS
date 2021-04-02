@@ -1,0 +1,2 @@
+# texterJS
+Angular app 
