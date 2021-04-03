@@ -1,0 +1,23 @@
+<form class="app-base-input-form">
+
+    <p class="baseText">Search by one symbol</p>
+    <p class="baseTextTinyWarning">{{ formWarningMsg }}</p>
+    <p class="baseText">{{ formTitleForText }}</p>
+
+    <textarea class="baseTextInput" [(ngModel)]="textFromBaseForm" name="myTextBox" cols="50" rows="5">Enter some text...</textarea>
+    <br />
+
+    <p class="baseText">{{ formTitleForSymbols }}</p>
+    <textarea [(ngModel)]="symbolToSearch" name="myTextBoxForSymbols" cols="50" rows="5">Enter text to search in...</textarea>
+    <br />
+
+    <button class="baseButton" (click)="buttonSearchClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Search</button>
+    <button class="baseButton" (click)="buttonClearClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Clear</button>
+    <button class="baseButton" (click)="buttonDeleteDublicatesClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Delete dublicates</button>
+    <button class="baseButton" (click)="buttonGetAllProtocols()" type="button" mdbBtn color="primary" mdbWavesEffect>get all url protocols</button>
+    <button class="baseButton" (click)="buttonGetAllIgnoredSymbolsClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>get all ignored symbols</button>
+    <button class="baseButton" (click)="buttonSearchWithoutIgnoredSymbolsClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>search without ignored symbols</button>
+
+    <p class="baseText">{{ resultOfSearch }}</p>
+
+</form>

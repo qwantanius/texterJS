@@ -1,0 +1,26 @@
+.app-base-input-form {
+    border: slategrey solid 1px;
+    height: min-content;
+    width: min-content;
+    padding: 1%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.baseTextInput {
+    color: rgb(0, 0, 0);
+}
+
+.baseTextTinyWarning {
+    color: darkcyan;
+    animation-fill-mode: backwards;
+}
+
+.baseText {
+    color: slategrey
+}
+
+.baseButton {
+    color: slategrey;
+    font: small;
+    padding-block: 0.2%;
+}
