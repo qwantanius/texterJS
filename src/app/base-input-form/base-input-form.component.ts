@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VirtualTimeScheduler } from 'rxjs';
 
 
 @Component({
@@ -140,12 +141,26 @@ export class BaseInputFormComponent implements OnInit {
 
 
   buttonSearchWithoutIgnoredSymbolsClicked(){
-    console.log(this.getAllIndexesOfIgnoredSymbols());
-    //delete from result indexes from ignore func
-    this.textFromBaseForm.split(this.baseSeparator).forEach((value,index,arr) => {
-      console.log(value);
-    });
-    //call common search
+    let resultToRewriteIgnore: any[] = [];
+    for(let indexForGlobalSursor:number=0; indexForGlobalSursor < this.textFromBaseForm.split(this.baseSeparator).length; indexForGlobalSursor++){
+      let cursorIndex:number = indexForGlobalSursor;
+      let cursorValue:string = String(this.textFromBaseForm.split(this.baseSeparator)[indexForGlobalSursor]);
+      let specialSymCounter:number = 0;
+      this.getAllIndexesOfIgnoredSymbols().forEach((value) => {
+        if(!(cursorIndex == value)){
+          specialSymCounter++;
+        }
+      });
+      if(specialSymCounter == this.getAllIndexesOfIgnoredSymbols().length){
+        resultToRewriteIgnore.push(cursorValue);
+      }
+      this.resultOfSearch = [];
+      resultToRewriteIgnore.forEach((value,index,arr) => {
+        this.symbolToSearch.indexOf(value) >=0 ? this.resultOfSearch.push(value) : "";
+      });
+      
+    }
+
   }
 
 
