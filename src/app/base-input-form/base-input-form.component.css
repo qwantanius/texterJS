@@ -22,5 +22,11 @@
 .baseButton {
     color: slategrey;
     font: small;
-    padding-block: 0.2%;
+    padding-block: 2%;
+}
+
+
+.baseButtonArea {
+    padding-block:5%;
+    left: 1000px;
 }

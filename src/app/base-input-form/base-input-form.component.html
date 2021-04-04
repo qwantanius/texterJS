@@ -11,13 +11,15 @@
     <textarea [(ngModel)]="symbolToSearch" name="myTextBoxForSymbols" cols="50" rows="5">Enter text to search in...</textarea>
     <br />
 
-    <button class="baseButton" (click)="buttonSearchClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Search</button>
-    <button class="baseButton" (click)="buttonClearClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Clear</button>
-    <button class="baseButton" (click)="buttonDeleteDublicatesClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Delete dublicates</button>
-    <button class="baseButton" (click)="buttonGetAllProtocols()" type="button" mdbBtn color="primary" mdbWavesEffect>get all url protocols</button>
-    <button class="baseButton" (click)="buttonGetAllIgnoredSymbolsClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>get all ignored symbols</button>
-    <button class="baseButton" (click)="buttonSearchWithoutIgnoredSymbolsClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>search without ignored symbols</button>
 
+    <div class="baseButtonArea">
+        <button class="baseButton" (click)="buttonSearchClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Search</button>
+        <button class="baseButton" (click)="buttonClearClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Clear</button>
+        <button class="baseButton" (click)="buttonDeleteDublicatesClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>Delete dublicates</button>
+        <button class="baseButton" (click)="buttonGetAllProtocols()" type="button" mdbBtn color="primary" mdbWavesEffect>get all url protocols</button>
+        <button class="baseButton" (click)="buttonGetAllIgnoredSymbolsClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>get all ignored symbols</button>
+        <button class="baseButton" (click)="buttonSearchWithoutIgnoredSymbolsClicked()" type="button" mdbBtn color="primary" mdbWavesEffect>search without ignored symbols</button>
+    </div>
     <p class="baseText">{{ resultOfSearch }}</p>
 
 </form>
